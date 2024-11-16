@@ -1,175 +1,116 @@
-/* the styles for the elements */
-* {
-	margin: 0;
-	padding: 0;
-}
-html {
-	background-color: white;
-}
+/* General styling */
 body {
-	font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    width: 800px;
-    margin: 0 auto;
-    border: 3px solid #800000;
-    background-color: #fffded;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
 }
-a:focus, a:hover {
-	font-style: italic;
-}
-/* the styles for the header */
-header {
-	padding: 1.5em 0 2em 0;
-	border-bottom: 3px solid #931420;
-	background-image: -moz-linear-gradient(
-	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
-	background-image: -webkit-linear-gradient(
-	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
-	background-image: -o-linear-gradient(
-	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
-	background-image: linear-gradient(
-	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
-}
-header h2 {
-	font-size: 175%;
-	color: #800000;
-}
-header h3 {
-	font-size: 130%;
-	font-style: italic;
-}
-header img {
-	float: left;
-	padding: 0 30px;
-}
-.shadow {
-	text-shadow: 2px 2px 2px #800000;
-}
-/* the styles for the form */
-fieldset {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding-top: .5em;
-}
-legend {
-    color: #931420;
-    font-weight: bold;
-    font-size: 85%;
-    margin-bottom: .5em;
-}
-label {
-    float: left;
-    width: 12em;
-    text-align: right;
-}
-label, input, select {
-	font-size: 90%;
-}
-input, select {
-    width: 15em;
-    margin-left: .5em;
-    margin-bottom: .5em;
-}
-input:required, input[required] {
-	border: 3px solid red;
-}
-input:valid {
-	border: 1px solid black;
-}
-input:invalid {
-	box-shadow: none;
-}
-br {
-    clear: both;
-}
-#buttons input {
-	width: 10em;
-}
-/* the styles for the navigation menu */
-#nav_menu ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	position: relative;
-}
-#nav_menu ul li {
-	float: left;
-}
-#nav_menu ul li a {
-    display: block;
-    width: 160px;
+
+h1 {
+    color: #800000;
     text-align: center;
-    padding: 1em 0;
-    text-decoration: none;
+    margin-top: 1em;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Fieldset styling */
+fieldset {
+    margin: 0 0 .5em 0; /* No top margin, .5em bottom margin */
+    padding: .5em 1em;  /* .5em top/bottom padding, 1em left/right padding */
+    border: 1px solid #ddd;
+}
+
+legend {
+    color: black;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+/* Label and input styling */
+label {
+    display: inline-block;
+    width: 150px; /* Align labels */
+    text-align: right;
+    margin-right: 10px;
+}
+
+input, select {
+    width: 200px; /* Default width for input fields */
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 3px;
+}
+
+/* Validation styling */
+input:required, select:required {
+    border: 2px solid #800000; /* Required fields border */
+}
+
+input:valid, select:valid {
+    border: 1px solid black; /* Valid fields border */
+}
+
+input:invalid, select:invalid {
+    border: 2px solid #800000; /* Invalid fields border */
+    color: #800000; /* Invalid fields text color */
+}
+
+/* Placeholder styling */
+input::placeholder {
+    font-style: italic;
+    color: #999;
+}
+
+/* Dropdown specific styling */
+#expiration_month {
+    width: 7em; /* Set width for month dropdown */
+}
+
+#expiration_year {
+    width: 5em; /* Set width for year dropdown */
+}
+
+/* Payment Method styling */
+#payment_method label {
+    float: none; /* Disable floating */
+    width: auto; /* Allow labels to adjust width automatically */
+    margin-right: 1em; /* Add spacing between radio buttons */
+}
+
+#payment_method input {
+    width: auto; /* Remove width constraint for radio buttons */
+    margin-left: 3em; /* Align radio buttons side by side */
+}
+
+/* Buttons styling */
+#buttons input {
+    width: auto; /* Adjust button size */
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
     background-color: #800000;
     color: white;
-    font-weight: bold;
-}
-#nav_menu a.current {
-	color: yellow;
-}
-#nav_menu ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-}
-#nav_menu ul ul li {
-	float: none;
-}
-#nav_menu ul li:hover > ul {
-	display: block;
-}
-#nav_menu > ul::after {
-    content: "";
-    clear: both;
-    display: block;
+    cursor: pointer;
 }
 
-/* the styles for the main content */
-main {
-	clear: left;
+#buttons input:hover {
+    background-color: #a00000; /* Slightly darker on hover */
 }
 
-/* the styles for the section */
-section {
-	width: 525px;
-	float: right;
-	padding: 0 20px 20px 20px;
-}
-section h1 {
-	font-size: 150%;
-	color: #800000;
-	padding: .5em 0 .25em 0;
-	margin: 0;
+#buttons input[type="reset"] {
+    background-color: #555;
 }
 
-/* the styles for the aside */
-aside {
-	width: 215px;
-	float: right;
-	padding: 0 0 20px 20px;
-}
-aside h2 {
-	color: #800000;
-	font-size: 130%;
-	padding: .5em 0 .25em 0;
-}
-
-aside h3 {
-	font-size: 105%;
-	padding-bottom: .25em;
-}
-aside img {
-	padding-bottom: 1em;
-}
-
-/* the styles for the footer */
-footer {
-	background-color: #931420;
-	clear: both;
-}
-footer p {
-	text-align: center;
-	color: white;
-	padding: 1em 0;
+#buttons input[type="reset"]:hover {
+    background-color: #333;
 }
