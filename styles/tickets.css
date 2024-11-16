@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* General styles */
 * {
     margin: 0;
     padding: 0;
@@ -41,7 +41,7 @@ header img {
     text-shadow: 2px 2px 2px #800000;
 }
 
-/* Navigation menu styles */
+/* Navigation menu */
 #nav_menu ul {
     list-style-type: none;
     margin: 0;
@@ -81,12 +81,12 @@ header img {
     display: block;
 }
 
-/* Main content styles */
+/* Main content */
 main {
     clear: left;
 }
 
-/* Section styles */
+/* Section */
 section {
     width: 525px;
     float: right;
@@ -99,7 +99,7 @@ section h1 {
     margin: 0;
 }
 
-/* Aside styles */
+/* Aside */
 aside {
     width: 215px;
     float: right;
@@ -118,8 +118,20 @@ aside img {
     padding-bottom: 1em;
 }
 
+/* Footer */
+footer {
+    background-color: #931420;
+    clear: both;
+}
+footer p {
+    text-align: center;
+    color: white;
+    padding: 1em 0;
+}
+
 /* Form styles */
 fieldset {
+    margin-top: 0;
     margin-bottom: .5em;
     padding: .5em 1em;
 }
@@ -150,7 +162,6 @@ input:valid {
 }
 input:invalid {
     border: 2px solid #800000;
-    color: #800000;
 }
 br {
     clear: both;
@@ -159,32 +170,23 @@ br {
     width: 10em;
 }
 
-/* Styles for the Payment Method buttons */
+/* Payment method */
 #payment_method label {
     float: none;
     display: inline-block;
-    margin-left: 3em;
-    width: auto;
+    margin-right: 3em;
 }
 #payment_method input {
-    margin-left: 0.5em;
+    width: auto;
+    margin-left: 0;
 }
 
-/* Styles for Credit Card Information */
-#credit_card_info #month {
+/* Expiration Date styles */
+#month {
     width: 7em;
+    margin-right: .5em;
 }
-#credit_card_info #year {
+#year {
     width: 5em;
-}
-
-/* Footer styles */
-footer {
-    background-color: #931420;
-    clear: both;
-}
-footer p {
-    text-align: center;
-    color: white;
-    padding: 1em 0;
+    margin-left: .5em;
 }
